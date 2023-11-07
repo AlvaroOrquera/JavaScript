@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <title>Starbucks - Café de alta calidad, Bebidas y Alimentos | Starbucks</title>
+</head>
+<body>
+    <header class="flex justify-center items-center h-16 p-2 md:h-20">
+        <img class="md:mr-2" class="w-10" src="./assets/img/logo.svg" alt="logo_starbucks">
+        <nav class="md:mr-64 lg:mr-96">
+            <ul class="flex gap-2 p-2 md:text-xl md:gap-8 md:font-bold">
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Cafe</a></li>
+                <li><a href="#">Novedades</a></li>
+            </ul>
+        </nav>
+        <ul class="text-xs flex flex-col items-center md:flex-row">
+            <li><img class="w-6" src="./assets/img/map-pin-filled.svg" alt="map_pin"></li>
+            <li><a href="">Localizar tienda</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="bg-orange-600 text-white text-center pb-8 md:flex md:justify-center md:items-center">
+            <picture class="md:w-3/4 md:mt-6">
+                <img src="./assets/img/banner.png" alt="Coffe_banner">
+            </picture>
+            <section class="md:w-10/12">
+                <h1 class="font-bold text-3xl pt-8 md:text-5xl md:pl-8 md:pr-8" >¡Pumpkin está de regreso!</h1>
+                <p class="md:pl-10 md:pr-10">¡Pumpkin Spice Cold Brew con Cold Foam, Pumpkin Spice Latte & Pumpkin Spice Frappuccino!</p>
+            </section>
+        </div>
+        <div class="bg-gray-200 text-black text-center pb-8 mb-4 mt-4 md:flex md:flex-row-reverse md:justify-center md:items-center">
+            <picture class="md:w-3/4">
+                <img class="md:mt-6" src="./assets/img/juntos_por_el_cafe.jpg" alt="">
+            </picture>
+            <section class="text-center m-2">
+                <h2 class="font-bold text-xl pt-8 pb-8">EL CORAZÓN DE NUESTRAS BEBIDAS</h2>
+                <p class="italic text-xl text-center p-8">¡Colombia, Espresso Roast y Colombia Nariño!</p>
+                <a class="border-solid border-black border rounded-full pl-4 pr-4 pt-1 pb-1" href="#">Conoce más</a>
+            </section>
+        </div>
+        <div class="bg-house text-white text-center pb-8 mt-4 mb-4 md:flex md:items-center" >
+            <picture class="md:w-3/4 md:mt-6">
+                <img src="./assets/img/nuestro_compromiso.jpg" alt="compromiso">
+            </picture>
+            <section>
+                <h2 class="font-bold text-xl pt-8 pb-8">INFORME DE SUSTENTABILIDAD</h2>
+                <p class="italic text-xl text-center pb-4">Juntos seguimos construyendo un futuro más sostenible para el café 💚</p>
+                <a class="border-solid border-white border rounded-full pl-4 pr-4 pt-1 pb-1" href="">Leer Informe</a>
+            </section>
+        </div>
+        <div class="bg-house text-white text-center pb-8 mt-4 mb-4 md:flex md:flex-row-reverse md:justify-center md:items-center">
+            <picture class="md:w-3/4 md:mt-6">
+                <img src="./assets/img/terminos_y_condiciones.png" alt="TyC">
+            </picture>
+            <section class="md:w-3/4 md:mt-6">
+                <h2 class="font-bold text-xl pt-3 ">Términos y Condiciones</h2>
+                <p class="italic text-xl font-bold text-center pb-10">ACTIVIDADES</p>
+                <a class="border-solid border-white border rounded-full pl-4 pr-4 pt-1 pb-1" href="#">Más Información</a>
+            </section>
+        </div>
+        <div class="lg:flex">
+            <section>
+                <h2 class="pl-2">Sobre nosotros</h2>
+                <ul class="text-gray-500 pl-2">
+                    <li class="p-2"><a href="">Acerca de Starbucks</a></li>
+                    <li class="p-2"><a href="">Trabaja con nosotros</a></li>
+                    <li class="p-2"><a href="">Historias y noticias Starbucks</a></li>
+                    <li class="p-2"><a href="">Sobre Notmilk</a></li>
+                    <li class="p-2"><a href="">Guía de preparación de un buen café en casa</a></li>
+                </ul>
+            </section>
+            <section class="">
+                <h2 class="pl-2">Atencion al Cliente</h2>
+                <ul class="text-gray-500 pl-2">
+                    <li class="p-2"><a href="">Sugerencias y reclamos</a></li>
+                    <li class="p-2"><a href="">Factura Electrónica</a></li>
+                </ul>
+                <picture>
+                    <a href=""><img class="w-1/2 pl-5" src="./assets/img/footer-colombia.png" alt=""></a>
+                </picture>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a class="" href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+        <ul class="text-gray-600 pl-2 mb-2 md:flex md:flex-wrap md:items-center md:justify-center md:p-10 lg:text-base">
+            <li class="p-2 border-r border-gray-400"><a href="">Términos de uso web</a></li>
+            <li class="p-2 border-r border-gray-400"><a href="">Aviso de Privacidad</a></li>
+            <li class="p-2 border-r border-gray-400"><a href="">Política de tratamiento de datos</a></li>
+            <li class="p-2 border-r border-gray-400"><a href="">Reversión de pago</a></li>
+            <li class="p-2"><a href="">Política de garantias</a></li>
+        </ul>
+        <span class="block text-gray-300 text-xs pl-4 pr-4 md:text-center">Ⓒ 2023. Starbucks Cofee Company. Reservados todos los derechos</span>
+        <span class="block text-gray-300 text-xs pl-4 pr-4 md:text-center">co | prod |4e96568eeacba34ab9b4f72e538133b5877b273 | 01/09/2023-05:07:06:853</span>
+    </footer>
+</body>
+</html>
