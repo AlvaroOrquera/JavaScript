@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,9 +10,11 @@ body {
     flex-direction: column;
 }
 
-header, footer {
+
+footer {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0 2rem;
     background-color: rgb(197, 193, 193);
     min-height: 4rem;
@@ -22,9 +24,6 @@ header {
     justify-content: space-between;
 }
 
-footer {
-    justify-content: center;
-}
 
 a {
     text-decoration: none;
