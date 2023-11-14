@@ -37,21 +37,23 @@ export function filterGenres(listMovies, genreSelect) {
     return filterGenres
 }
 
-export function crearDetalles(peliculas){
-    return `<article
-        class="flex flex-col bg-gradient-to-t from-slate-700 to-slate-900 items-center justify-center h-[50rem] w-[84rem]">
 
-        <div class="flex  flex-wrap justify-center gap-10">
-            <img class="h-[25rem] w-[40rem] rounded-full" src="${peliculas.image}" alt="${peliculas.title}"></img>
-                <div class="flex flex-col flex-wrap justify-center gap-3">
+
+export function crearDetalles(peliculas) {
+    return `<article
+        class="flex flex-col md:flex-row bg-gradient-to-t from-slate-700 to-slate-900 items-center justify-center mt-3 rounded-3xl">
+
+        <div class="flex flex-col flex-wrap items-center md:justify-center gap-10">
+            <img class="md:h-[20rem] md:w-[70rem] md:flex-row rounded-full" src="${peliculas.image}" alt="${peliculas.title}"></img>
+                <div class="flex flex-col flex-wrap justify-center gap-3 text-white">
                     <h2 class="font-kanit; text-3xl">${peliculas.title}</h2>
-                    <h3 class="font-semibold w-[30rem]">${peliculas.tagline}</h3>
-                    <p class="font-medium w-[25rem]">${peliculas.overview}</p>
+                    <h3 class="font-semibold w-[10rem]">${peliculas.tagline}</h3>
+                    <p class="font-medium w-[10rem]">${peliculas.overview}</p>
                 </div>
         </div>
-        <div class="flex flex-wrap justify-between w-[85%] p-6 gap-5 rounded-lg">
+        <div class="flex flex-wrap justify-around items-center p-6 gap-5 rounded-lg">
             <table
-                class="border-black text-white mt-8 bg-gradient-to-t from-slate-900 to-slate-700 p-10 gap-5 rounded-lg text-center w-[25rem] h-[10rem] border-solid-white">
+                class="border-black text-white mt-8 bg-gradient-to-t from-slate-700 to-slate-900 p-10 gap-5 rounded-lg text-center md:w-[25rem] md:h-[10rem] w-64 border-solid-white">
                 <tbody>
                     <tr>
                         <th>Original Lenguage</th>
@@ -71,7 +73,7 @@ export function crearDetalles(peliculas){
                     </tr>
                 </tbody>
             </table>
-            <table class="border-black text-white mt-8 bg-gradient-to-t from-slate-900 to-slate-700 p-10 gap-5 rounded-lg text-center w-[25rem] h-[10rem] border-solid-white">
+            <table class="border-black text-white mt-8 bg-gradient-to-t from-slate-700 to-slate-900 p-10 gap-5 rounded-lg text-center md:w-[25rem] md:h-[10rem] w-64 border-solid-white">
                 <tr>
                     <th>Vote Average</th>
                     <td>${peliculas.vote_average}</td>

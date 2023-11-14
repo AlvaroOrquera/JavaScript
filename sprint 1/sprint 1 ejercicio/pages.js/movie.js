@@ -1,5 +1,6 @@
 import{crearTemplate, crearTarjeta, CreateSelector,printTemplate, FilterTitle, filterGenres} from "../pages.js/function.js"
 import{ movies } from "./data.js"
+
 const Alvapeli= document.getElementById(`Alvapeli`)
 
 Alvapeli.innerHTML += crearTemplate(movies)
