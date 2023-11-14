@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black">
+    <h1 class="text-center bg-black text-white mb-20">EVENTOS</h1>
+    <div id="contenedorGeneral" class="flex flex-wrap items-center gap-10 justify-center">
+        <div id="Contenedor1"
+            class="flex flex-col items-center text-center w-[20rem] h-[20rem] bg-white rounded-lg mb-[10px]">
+            <h2 class="text-black">Ejericicio n1</h2>
+            <div id="bgParaCambiarDeColor" class="flex flex-col w-[15rem] h-[15rem] rounded-lg mb-2 bg-gray-500">
+                <p id="ColorDelTexto">gray</p>
+            </div>
+            <button id="BotonCambiadorDeColor"
+                class="flex bg-orange-600 w-[5rem] h-[2rem] justify-center rounded-lg p-1">cambiar</button>
+        </div>
+
+        <div id="Contenedor2"
+            class="flex flex-col items-center text-center w-[20rem] h-[20rem] bg-white rounded-lg mb-[10px]">
+            <h2 class="text-black">Ejercicio n2</h2>
+            <div id="DondeVaElTexto" class="flex flex-col w-[15rem] h-[15rem] rounded-lg mb-2 bg-gray-500">
+                <p id="TextoDelInput"></p>
+            </div>
+            <form id="FormularioDelInput">
+                <input type="text" id="inputText" placeholder="Ingrese el texto"
+                    class="border-2 border-black rounded-lg m-2">
+                <button type="button" id="BotonDeReset"
+                    class="flex bg-orange-600 w-[5rem] h-[2rem] justify-center rounded-lg p-1 m-2">Reset</button>
+            </form>
+        </div>
+        <div id="Contenedor3"
+            class="flex flex-col items-center text-center w-[20rem] h-[20rem] bg-white rounded-lg mb-[10px]">
+            <h2 class="text-black">Ejercicio n3</h2>
+            <div id="FormularioCompleto" class="flex flex-col w-[15rem] h-[15rem] rounded-lg mb-2 bg-gray-500">
+                <form id="FormularioDeIMC">
+                    <label for="Estatura" class="text-xl">Estatura</label>
+                    <p>en Cm</p>
+                    <input type="number" id="Estatura" placeholder="Ingrese SU Estatura"
+                        class="border-2 border-black rounded-lg m-2">
+                    <label for="Peso" class="text-xl">Peso</label>
+                    <p>en kg</p>
+                    <input type="number" id="Peso" placeholder="Ingrese su Peso"
+                        class="border-2 border-black rounded-lg m-2">
+                </form>
+            </div>
+            <button type="button" id="BotonDeCalcular"
+                class="flex bg-orange-600 w-[5rem] h-[2rem] justify-center rounded-lg p-1 m-2">Calcular</button>
+        </div>
+        <div id="Contenedor3.1"
+            class="flex flex-col items-center text-center w-[16rem] h-[10rem] bg-white rounded-lg mb-[10px]">
+            <div id="FormularioCompleto" class="flex flex-col w-[15rem] h-[15rem] rounded-lg mb-2 bg-gray-500 mt-2">
+                <h2 class="text-black">Resultado</h2>
+                <p>su indice de masa corporal es:</p>
+                <input type="text" id="inputResultado" class="border-2 border-black rounded-lg m-2">
+            </div>
+        </div>
+        <div id="Contenedor4"
+            class="flex flex-col items-center text-center w-[20rem] h-[20rem] bg-white rounded-lg mb-[10px]">
+            <h2 class="text-black">Ejercicio n4</h2>
+            <div id="FormularioMoneda" class="flex flex-col w-[15rem] h-[15rem] rounded-lg mb-2 bg-gray-500">
+                <form id="FormularioDeCambioDeMoneda">
+                    <label for="Moneda" class="text-xl">Monto Moneda Local</label>
+                    <p>Sin comas ni puntos</p>
+                    <input type="number" id="MonedaLocal" placeholder="Ingrese el monto"
+                        class="border-2 border-black rounded-lg m-2">
+                    <label for="Dolares" class="text-xl">Monto en Dólares</label>
+                    <p>sin comas ni puntos</p>
+                    <input type="number" id="MondoDolares" class="border-2 border-black rounded-lg m-2">
+                </form>
+            </div>
+            <div class="flex">
+                <button type="button" id="BotonDeConvertir"
+                    class="flex bg-orange-600 w-[5rem] h-[2rem] justify-center rounded-lg p-1 m-2">Convertir</button>
+                <button type="button" id="BotonParaBorrar"
+                    class="flex bg-orange-600 w-[5rem] h-[2rem] justify-center rounded-lg p-1 m-2">Borrar</button>
+            </div>
+        </div>
+        <div id="Contenedor4.1"
+        class="flex flex-col items-center text-center w-[20rem] h-[20rem] bg-white rounded-lg mb-[10px]">
+        <h2 class="text-black">Ejercicio n4.1</h2>
+        <div id="FormularioMoneda2" class="flex flex-col w-[15rem] h-[15rem] rounded-lg mb-2 bg-gray-500">
+            <form id="FormularioDeCambioDeMoneda2">
+                <label for="Dolares" class="text-xl">Monto en Dólares</label>
+                <p>sin comas ni puntos</p>
+                <input type="number" id="MondoDolares2" placeholder="Ingrese el monto" class="border-2 border-black rounded-lg m-2">
+                <label for="Moneda" class="text-xl">Monto Moneda Local</label>
+                <p>Sin comas ni puntos</p>
+                <input type="number" id="MonedaLocal2"
+                    class="border-2 border-black rounded-lg m-2">
+            </form>
+        </div>
+        <div class="flex">
+            <button type="button" id="BotonDeConvertir2"
+                class="flex bg-orange-600 w-[5rem] h-[2rem] justify-center rounded-lg p-1 m-2">Convertir</button>
+            <button type="button" id="BotonParaBorrar2"
+                class="flex bg-orange-600 w-[5rem] h-[2rem] justify-center rounded-lg p-1 m-2">Borrar</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    </div>
+    <script type="module" src="./style/tailwind.config.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
