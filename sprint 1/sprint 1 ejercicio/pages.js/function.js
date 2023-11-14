@@ -13,6 +13,7 @@ export function crearTarjeta(movies) {
     <h2 class="text-center">${movies.title}</h2>
     <h3 class="text-center">${movies.tagline}</h3>
     <p class="line-clamp-5">${movies.overview}</p>
+    <a href="./detalles.html?id=${movies.id}">More details ></a>
 </article>`
 }
 
@@ -41,7 +42,7 @@ export function crearDetalles(peliculas){
         class="flex flex-col bg-gradient-to-t from-slate-700 to-slate-900 items-center justify-center h-[50rem] w-[84rem]">
 
         <div class="flex  flex-wrap justify-center gap-10">
-            <img class="h-[25rem] w-[40rem]" src="${peliculas.image}" alt="${peliculas.title}"></img>
+            <img class="h-[25rem] w-[40rem] rounded-full" src="${peliculas.image}" alt="${peliculas.title}"></img>
                 <div class="flex flex-col flex-wrap justify-center gap-3">
                     <h2 class="font-kanit; text-3xl">${peliculas.title}</h2>
                     <h3 class="font-semibold w-[30rem]">${peliculas.tagline}</h3>
@@ -50,7 +51,7 @@ export function crearDetalles(peliculas){
         </div>
         <div class="flex flex-wrap justify-between w-[85%] p-6 gap-5 rounded-lg">
             <table
-                class="border-black text-white bg-gradient-to-t from-slate-900 to-slate-700 p-10 gap-5 rounded-lg text-center w-[25rem] h-[10rem] border-solid-white">
+                class="border-black text-white mt-8 bg-gradient-to-t from-slate-900 to-slate-700 p-10 gap-5 rounded-lg text-center w-[25rem] h-[10rem] border-solid-white">
                 <tbody>
                     <tr>
                         <th>Original Lenguage</th>
@@ -70,7 +71,7 @@ export function crearDetalles(peliculas){
                     </tr>
                 </tbody>
             </table>
-            <table class="border-black text-white bg-gradient-to-t from-slate-900 to-slate-700 p-10 gap-5 rounded-lg text-center w-[25rem] h-[10rem] border-solid-white">
+            <table class="border-black text-white mt-8 bg-gradient-to-t from-slate-900 to-slate-700 p-10 gap-5 rounded-lg text-center w-[25rem] h-[10rem] border-solid-white">
                 <tr>
                     <th>Vote Average</th>
                     <td>${peliculas.vote_average}</td>
@@ -87,5 +88,11 @@ export function crearDetalles(peliculas){
         </div>
     </article>`
 }
+
+export function insertarDetalles(peliculas, contenedor) {
+    crearDetalles(peliculas)
+    contenedor.innerHTML += crearDetalles(peliculas)
+}
+
 
 
