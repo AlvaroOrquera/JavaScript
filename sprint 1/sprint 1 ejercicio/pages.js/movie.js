@@ -1,22 +1,62 @@
-const contenedor = document.getElementById(`Alvapeli`)
-console.log(movies)
+import{crearTemplate, crearTarjeta, CreateSelector,printTemplate, FilterTitle, filterGenres} from "../pages.js/function.js"
+import{ movies } from "./data.js"
+const Alvapeli= document.getElementById(`Alvapeli`)
 
 Alvapeli.innerHTML += crearTemplate(movies)
 
-function crearTemplate(listaMovies) {
-    let template = ""
-    for (const movie of listaMovies) {
-        template += crearTarjeta(movie)
+const inputSearch = document.getElementById('inputSearch');
+const inpuntList = document.getElementById('inputList');
+
+const movieGenres = movies.map(movie => (movie.genres)).flat();
+const ListGenres = ['All', ...new Set(movieGenres)];
+
+console.log(ListGenres);
+
+printTemplate(ListGenres, inpuntList, CreateSelector);
+
+
+
+let genreFilter = null;
+let searchFilter = null;
+
+inpuntList.addEventListener("input", () => {
+    const selectedGenre = inpuntList.value;
+    if (selectedGenre === "All") {
+        genreFilter = null; 
+        applyFiltersAndPrint(); 
+    } else {
+        genreFilter = selectedGenre !== "" ? filterGenres(movies, selectedGenre) : null;
+        applyFiltersAndPrint();
     }
-    console.log(template)
-    return template
+});
+
+
+inputSearch.addEventListener("input", () => {
+    const searchValue = inputSearch.value;
+    searchFilter = searchValue !== "" ? FilterTitle(movies, searchValue) : null;
+    applyFiltersAndPrint();
+});
+
+
+
+function applyFiltersAndPrint() {
+    const combinedFilter = combineFilters([genreFilter, searchFilter]);
+    if (combinedFilter.length > 0) {
+        printTemplate(combinedFilter, Alvapeli, crearTarjeta);
+    } else {
+        Alvapeli.innerHTML = "<p>No movies found</p>";
+    }
+}
+function combineFilters(filters) {
+    return filters.reduce((result, currentFilter) => {
+        if (currentFilter === null) {
+            return result;
+        }
+        return result.filter(movie => currentFilter.includes(movie));
+    }, movies);
 }
 
-function crearTarjeta(movies) {
-    return `<article class=" w-[350px] h-fit border flex flex-col gap-5 bg-gradient-to-t from-slate-700 to-slate-900 rounded-xl px-5 pb-5  p-4 items-center border-none ">
-    <img class="h-[70%]" src="${movies.image}" alt="">
-    <h2 class="text-center">${movies.title}</h2>
-    <h3 class="text-center">${movies.tagline}</h3>
-    <p class="line-clamp-5">${movies.overview}</p>
-</article>`
-}
+
+
+
+
